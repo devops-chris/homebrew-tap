@@ -11,7 +11,7 @@ class Cloudctx < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/devops-chris/cloudctx/releases/download/v0.1.1/cloudctx_Darwin_x86_64.tar.gz"
-      sha256 "94051127c562846a3f1532f00e41fb231f6aec4cc23c8457bf4a904fd44f1843"
+      sha256 "59af9c3d0bf343e565d27558e2754b72bc858d963a22c680b96ac455ce9be5bf"
 
       def install
         bin.install "cloudctx"
@@ -19,7 +19,7 @@ class Cloudctx < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/devops-chris/cloudctx/releases/download/v0.1.1/cloudctx_Darwin_arm64.tar.gz"
-      sha256 "1e1d93a4ca9e8ceca9da258f04c953661850cf0ff19cd7ad30fb05e7a4cf646a"
+      sha256 "870ca107627635bd5e7e89119df2fe016319a4bec0592fb56e1ef24007aaeb5e"
 
       def install
         bin.install "cloudctx"
@@ -30,14 +30,14 @@ class Cloudctx < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/devops-chris/cloudctx/releases/download/v0.1.1/cloudctx_Linux_x86_64.tar.gz"
-      sha256 "6c5e4766639d4c5276681fa068f5fc600d33b970b3a8c8081debe4c96774e5c6"
+      sha256 "f3c1c262177ab71824ecb42d27d92c75aa6a21c064661210da9691bcb5b5fb3a"
       def install
         bin.install "cloudctx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/devops-chris/cloudctx/releases/download/v0.1.1/cloudctx_Linux_arm64.tar.gz"
-      sha256 "44152d7cf2fb91b7d9c3ec43b194b884fd8a3a875011b2fbd64cb02c6e67a947"
+      sha256 "1027f2a5d58155fbb815dcd0b47907dc281bc529cd35378f2edfce2e8b1aaec4"
       def install
         bin.install "cloudctx"
       end
