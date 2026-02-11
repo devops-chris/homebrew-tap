@@ -5,13 +5,13 @@
 class Cloudctx < Formula
   desc "A unified CLI for switching between cloud contexts"
   homepage "https://github.com/devops-chris/cloudctx"
-  version "0.2.1"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/devops-chris/cloudctx/releases/download/v0.2.1/cloudctx_Darwin_x86_64.tar.gz"
-      sha256 "8f2278548855e730ce3c6aea0f5ff88295ac6bd21aff9b8c4fbdd0c111fff8d2"
+      url "https://github.com/devops-chris/cloudctx/releases/download/v0.3.0/cloudctx_Darwin_x86_64.tar.gz"
+      sha256 "0a086678e2490072d16c538cd84638f67ff63dfcf1344f8e2b5cbaf9bd83b23e"
 
       def install
         bin.install "cloudctx"
@@ -19,8 +19,8 @@ class Cloudctx < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/devops-chris/cloudctx/releases/download/v0.2.1/cloudctx_Darwin_arm64.tar.gz"
-      sha256 "e8968719de53981409e966c88ce03ea4bad7d9232ca9be8c2db97a9495582308"
+      url "https://github.com/devops-chris/cloudctx/releases/download/v0.3.0/cloudctx_Darwin_arm64.tar.gz"
+      sha256 "14f32adf4d6cff129d3ab95c741960633a26b0fe401b11e75339f5ced88026fe"
 
       def install
         bin.install "cloudctx"
@@ -31,16 +31,16 @@ class Cloudctx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/devops-chris/cloudctx/releases/download/v0.2.1/cloudctx_Linux_x86_64.tar.gz"
-      sha256 "1d47588647ee10938087db1bfa9dd6cacd4873dfffe6adcf018e3afeb5c36587"
+      url "https://github.com/devops-chris/cloudctx/releases/download/v0.3.0/cloudctx_Linux_x86_64.tar.gz"
+      sha256 "dfa535f5691a13c0e0f29be9db8628d887c280c686ee976eada3a59d8fe5ab87"
       def install
         bin.install "cloudctx"
         bin.install_symlink "cloudctx" => "ctx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/devops-chris/cloudctx/releases/download/v0.2.1/cloudctx_Linux_arm64.tar.gz"
-      sha256 "20d8601e5282f00427e14bab09eef292e1741d68425a6d2224c252f8d4cf3ee9"
+      url "https://github.com/devops-chris/cloudctx/releases/download/v0.3.0/cloudctx_Linux_arm64.tar.gz"
+      sha256 "75c15add0d2b4f5ff9a9e13a2add3880ece524a6b45ec1dbf0b9d1e50544661f"
       def install
         bin.install "cloudctx"
         bin.install_symlink "cloudctx" => "ctx"
