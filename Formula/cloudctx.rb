@@ -5,13 +5,13 @@
 class Cloudctx < Formula
   desc "A unified CLI for switching between cloud contexts"
   homepage "https://github.com/devops-chris/cloudctx"
-  version "0.3.1"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/devops-chris/cloudctx/releases/download/v0.3.1/cloudctx_Darwin_x86_64.tar.gz"
-      sha256 "b610ba2399748d57065cabb8c75504f8819c8cbfc2fef143986d8fbb8375fb02"
+      url "https://github.com/devops-chris/cloudctx/releases/download/v0.4.0/cloudctx_Darwin_x86_64.tar.gz"
+      sha256 "cbed5dcb038098b82b1245e42b3ddd419d754f0e165bf4b8d2600b8fffc51949"
 
       def install
         bin.install "cloudctx"
@@ -19,8 +19,8 @@ class Cloudctx < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/devops-chris/cloudctx/releases/download/v0.3.1/cloudctx_Darwin_arm64.tar.gz"
-      sha256 "b12f445c0f06f60380fd230039b4d9c191ee08731436896bed4c65d64267295a"
+      url "https://github.com/devops-chris/cloudctx/releases/download/v0.4.0/cloudctx_Darwin_arm64.tar.gz"
+      sha256 "f146f681a2420a1d6f9cf080dc7c6b3e52f7a2a0dd9fc71cc4808112b62ffaa6"
 
       def install
         bin.install "cloudctx"
@@ -31,21 +31,40 @@ class Cloudctx < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/devops-chris/cloudctx/releases/download/v0.3.1/cloudctx_Linux_x86_64.tar.gz"
-      sha256 "41c79e489a839a2978b265bab92fc946c0930342647f77ff9c3c8bf95b275e21"
+      url "https://github.com/devops-chris/cloudctx/releases/download/v0.4.0/cloudctx_Linux_x86_64.tar.gz"
+      sha256 "c3ee870d64293cefed34164ee235be3be5d2adee14736507fc38d3e275f04569"
       def install
         bin.install "cloudctx"
         bin.install_symlink "cloudctx" => "ctx"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/devops-chris/cloudctx/releases/download/v0.3.1/cloudctx_Linux_arm64.tar.gz"
-      sha256 "0ca7af2fc57643b12b8260d057ec5ee5068c660849a9cbdd1d16e99be8f0f098"
+      url "https://github.com/devops-chris/cloudctx/releases/download/v0.4.0/cloudctx_Linux_arm64.tar.gz"
+      sha256 "745596d20fa1cf2fe4f63c9d0c98428af4ab4e1dba57f98e416a9fa734beebdf"
       def install
         bin.install "cloudctx"
         bin.install_symlink "cloudctx" => "ctx"
       end
     end
+  end
+
+  def caveats
+    <<~EOS
+      cloudctx works out of the box - no shell setup required.
+
+      Optional: to make your shell prompt (Starship, powerlevel10k, etc.)
+      show the active AWS profile, add the shell integration so AWS_PROFILE
+      follows the profile you switch to:
+
+        # zsh - add to ~/.zshrc
+        eval "$(ctx shell-init zsh)"
+
+        # bash - add to ~/.bashrc
+        eval "$(ctx shell-init bash)"
+
+      Then open a new shell. This is only needed for prompt display; all
+      other functionality works without it.
+    EOS
   end
 
   test do
