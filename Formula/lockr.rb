@@ -5,21 +5,21 @@
 class Lockr < Formula
   desc "A simple CLI for managing secrets in AWS SSM Parameter Store"
   homepage "https://github.com/devops-chris/lockr"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/devops-chris/lockr/releases/download/v0.1.0/lockr_0.1.0_darwin_amd64.tar.gz"
-      sha256 "4fe1807ba5f0882b18974eef57d6a54e636c260c658fe53236f33a9676487db1"
+      url "https://github.com/devops-chris/lockr/releases/download/v0.2.0/lockr_0.2.0_darwin_amd64.tar.gz"
+      sha256 "8bd33268fce42ca2dcf860b0e27276374f484a929549ee9f6f043f5f18b3396e"
 
       def install
         bin.install "lockr"
       end
     end
     on_arm do
-      url "https://github.com/devops-chris/lockr/releases/download/v0.1.0/lockr_0.1.0_darwin_arm64.tar.gz"
-      sha256 "fd44c7b23629e6418d3ada1ec544ebc1eb596a8177fe82d347bf6f43f05a10df"
+      url "https://github.com/devops-chris/lockr/releases/download/v0.2.0/lockr_0.2.0_darwin_arm64.tar.gz"
+      sha256 "8c518c5620593f7e91d878dbb5cb950b8e4814e5585ef96ad2e12df26679b0d9"
 
       def install
         bin.install "lockr"
@@ -30,8 +30,8 @@ class Lockr < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/devops-chris/lockr/releases/download/v0.1.0/lockr_0.1.0_linux_amd64.tar.gz"
-        sha256 "7c3aee20011e3427e87fc3a996c202b77169fcb2a5f2ec321031370307d7c16b"
+        url "https://github.com/devops-chris/lockr/releases/download/v0.2.0/lockr_0.2.0_linux_amd64.tar.gz"
+        sha256 "f4c532e4ba1404ec9855f5b6aa4b4d19663665c6cb234d97ea5b8bda59739226"
 
         def install
           bin.install "lockr"
@@ -40,8 +40,8 @@ class Lockr < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/devops-chris/lockr/releases/download/v0.1.0/lockr_0.1.0_linux_arm64.tar.gz"
-        sha256 "671ef9b9264fc6145c652806cfc0f5931a73e9d424ba78c66edf59e998c24a79"
+        url "https://github.com/devops-chris/lockr/releases/download/v0.2.0/lockr_0.2.0_linux_arm64.tar.gz"
+        sha256 "935bf7679587813cb07b542a82d91df2447c0351ad1889cddbbed98c0eb62720"
 
         def install
           bin.install "lockr"
