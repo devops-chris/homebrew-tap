@@ -5,21 +5,21 @@
 class Platformr < Formula
   desc "Configurable developer self-service platform CLI"
   homepage "https://github.com/devops-chris/platformr"
-  version "0.1.37"
+  version "0.1.38"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/devops-chris/platformr/releases/download/v0.1.37/platformr_0.1.37_darwin_amd64.tar.gz"
-      sha256 "79e6ef0603e326d9ec5f4adf883d7f333a25f65f78318b7c052985e948b6ad49"
+      url "https://github.com/devops-chris/platformr/releases/download/v0.1.38/platformr_0.1.38_darwin_amd64.tar.gz"
+      sha256 "90807c8a3e51f8e00210a1bf5ef630ed7d303a5f81ab05024dc44cf3a7f74777"
 
       define_method(:install) do
         bin.install "platformr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/devops-chris/platformr/releases/download/v0.1.37/platformr_0.1.37_darwin_arm64.tar.gz"
-      sha256 "d0f858a1f9aae2c27128ff642ec070de4f6caf5df79cd195ca87e0869cfd3185"
+      url "https://github.com/devops-chris/platformr/releases/download/v0.1.38/platformr_0.1.38_darwin_arm64.tar.gz"
+      sha256 "693a8b7a0485482dd65767a0d59ffe4483c7fbd53c8fa3721860e338d6d240d3"
 
       define_method(:install) do
         bin.install "platformr"
@@ -29,15 +29,15 @@ class Platformr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/devops-chris/platformr/releases/download/v0.1.37/platformr_0.1.37_linux_amd64.tar.gz"
-      sha256 "d0dea7b1c3cd70db243270e52e74346d2b0fec60c684f08a7edf1f9bf2149867"
+      url "https://github.com/devops-chris/platformr/releases/download/v0.1.38/platformr_0.1.38_linux_amd64.tar.gz"
+      sha256 "2aef05ca72d36dca38ead6602f912421661947fe586209b906f395219c600ab4"
       define_method(:install) do
         bin.install "platformr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/devops-chris/platformr/releases/download/v0.1.37/platformr_0.1.37_linux_arm64.tar.gz"
-      sha256 "0b2c2dff1af8cab45f11b042b446cae9239b40f2fbb5fab36423b0260e27a0c4"
+      url "https://github.com/devops-chris/platformr/releases/download/v0.1.38/platformr_0.1.38_linux_arm64.tar.gz"
+      sha256 "d7bf9dd5a468442695ca0a023ff336e9c539ab40ff391cc72043a2360af2903a"
       define_method(:install) do
         bin.install "platformr"
       end
